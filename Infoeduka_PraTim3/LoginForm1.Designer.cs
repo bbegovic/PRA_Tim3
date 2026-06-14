@@ -38,7 +38,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(299, 161);
+            this.label1.Location = new System.Drawing.Point(195, 161);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 25);
             this.label1.TabIndex = 0;
@@ -46,15 +46,15 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(406, 161);
+            this.txtEmail.Location = new System.Drawing.Point(323, 161);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 31);
+            this.txtEmail.Size = new System.Drawing.Size(291, 31);
             this.txtEmail.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(271, 213);
+            this.label2.Location = new System.Drawing.Point(173, 213);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 25);
             this.label2.TabIndex = 2;
@@ -63,14 +63,14 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(406, 207);
+            this.txtPassword.Location = new System.Drawing.Point(323, 210);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(100, 31);
+            this.txtPassword.Size = new System.Drawing.Size(291, 31);
             this.txtPassword.TabIndex = 3;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(309, 278);
+            this.btnLogin.Location = new System.Drawing.Point(323, 298);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(139, 36);
             this.btnLogin.TabIndex = 4;
