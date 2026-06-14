@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnLecturers = new System.Windows.Forms.Button();
@@ -36,13 +35,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(469, 0);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(26, 31);
-            this.maskedTextBox1.TabIndex = 1;
             // 
             // label1
             // 
@@ -56,7 +48,7 @@
             // 
             // btnUsers
             // 
-            this.btnUsers.Location = new System.Drawing.Point(8, 155);
+            this.btnUsers.Location = new System.Drawing.Point(61, 155);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(309, 45);
             this.btnUsers.TabIndex = 3;
@@ -66,7 +58,7 @@
             // 
             // btnLecturers
             // 
-            this.btnLecturers.Location = new System.Drawing.Point(8, 283);
+            this.btnLecturers.Location = new System.Drawing.Point(61, 294);
             this.btnLecturers.Name = "btnLecturers";
             this.btnLecturers.Size = new System.Drawing.Size(309, 45);
             this.btnLecturers.TabIndex = 4;
@@ -75,7 +67,7 @@
             // 
             // btnNotifications
             // 
-            this.btnNotifications.Location = new System.Drawing.Point(429, 283);
+            this.btnNotifications.Location = new System.Drawing.Point(499, 294);
             this.btnNotifications.Name = "btnNotifications";
             this.btnNotifications.Size = new System.Drawing.Size(309, 45);
             this.btnNotifications.TabIndex = 5;
@@ -85,7 +77,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(429, 155);
+            this.button1.Location = new System.Drawing.Point(499, 155);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(309, 45);
             this.button1.TabIndex = 6;
@@ -95,7 +87,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(51, 505);
+            this.btnLogout.Location = new System.Drawing.Point(117, 510);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(155, 53);
             this.btnLogout.TabIndex = 7;
@@ -113,7 +105,6 @@
             this.Controls.Add(this.btnLecturers);
             this.Controls.Add(this.btnUsers);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.maskedTextBox1);
             this.Name = "AdminDashboardForm";
             this.Text = "AdminDashboardForm";
             this.ResumeLayout(false);
@@ -122,8 +113,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnLecturers;
