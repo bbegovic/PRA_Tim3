@@ -16,5 +16,15 @@ namespace Infoeduka_PraTim3
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LecturerDashboardForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
