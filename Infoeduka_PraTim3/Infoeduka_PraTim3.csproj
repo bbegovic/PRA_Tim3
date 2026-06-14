@@ -53,6 +53,12 @@
     <Compile Include="AdminDashboardForm.Designer.cs">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CoursesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoursesForm.Designer.cs">
+      <DependentUpon>CoursesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LecturerDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="Repositories\UserRepository.cs" />
     <EmbeddedResource Include="AdminDashboardForm.resx">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoursesForm.resx">
+      <DependentUpon>CoursesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LecturerDashboardForm.resx">
       <DependentUpon>LecturerDashboardForm.cs</DependentUpon>

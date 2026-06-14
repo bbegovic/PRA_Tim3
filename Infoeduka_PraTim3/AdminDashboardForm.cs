@@ -29,7 +29,11 @@ namespace Infoeduka_PraTim3
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            CoursesForm coursesForm = new CoursesForm();
 
+            this.Hide();           // sakrij Admin Dashboard
+            coursesForm.ShowDialog(); // otvori CoursesForm
+            this.Show();           // vrati Admin Dashboard kad zatvoriš CoursesForm
         }
     }
 }

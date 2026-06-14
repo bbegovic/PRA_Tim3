@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnLecturers = new System.Windows.Forms.Button();
@@ -36,13 +35,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(469, 0);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(26, 31);
-            this.maskedTextBox1.TabIndex = 1;
             // 
             // label1
             // 
@@ -113,7 +105,6 @@
             this.Controls.Add(this.btnLecturers);
             this.Controls.Add(this.btnUsers);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.maskedTextBox1);
             this.Name = "AdminDashboardForm";
             this.Text = "AdminDashboardForm";
             this.ResumeLayout(false);
@@ -122,8 +113,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnLecturers;
