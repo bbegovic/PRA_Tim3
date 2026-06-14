@@ -36,6 +36,8 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.dgvCourses = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCourses)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -107,6 +109,17 @@
             this.btnClose.Text = "Zatvori";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
+            // dgvCourses
+            // 
+            this.dgvCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCourses.Location = new System.Drawing.Point(-6, -139);
+            this.dgvCourses.Name = "dgvCourses";
+            this.dgvCourses.RowHeadersWidth = 82;
+            this.dgvCourses.RowTemplate.Height = 33;
+            this.dgvCourses.Size = new System.Drawing.Size(988, 947);
+            this.dgvCourses.TabIndex = 8;
+            this.dgvCourses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCourses_CellContentClick);
+            // 
             // CoursesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -120,8 +133,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCourseNam);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvCourses);
             this.Name = "CoursesForm";
             this.Text = "CoursesForm";
+            this.Load += new System.EventHandler(this.CoursesForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCourses)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,5 +153,6 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.DataGridView dgvCourses;
     }
 }

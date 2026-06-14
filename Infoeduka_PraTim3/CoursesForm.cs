@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Infoeduka_PraTim3.Repositories;
 
 namespace Infoeduka_PraTim3
 {
@@ -18,6 +19,21 @@ namespace Infoeduka_PraTim3
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void LoadCourses()
+        {
+            CourseRepository repository = new CourseRepository();
+
+            dgvCourses.DataSource = repository.GetAllCourses();
+        }
+
+        private void CoursesForm_Load(object sender, EventArgs e)
+        {
+            LoadCourses();
+        }
+        private void dgvCourses_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
