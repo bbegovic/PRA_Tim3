@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Infoeduka_PraTim3
 {
-    public partial class Form1 : Form
+    public partial class LoginForm1 : Form
     {
-        public Form1()
+        public LoginForm1()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
