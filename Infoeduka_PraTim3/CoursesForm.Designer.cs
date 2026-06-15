@@ -43,7 +43,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(235, 290);
+            this.label1.Location = new System.Drawing.Point(225, 519);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 25);
             this.label1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             // txtCourseNam
             // 
-            this.txtCourseNam.Location = new System.Drawing.Point(473, 290);
+            this.txtCourseNam.Location = new System.Drawing.Point(442, 519);
             this.txtCourseNam.Name = "txtCourseNam";
             this.txtCourseNam.Size = new System.Drawing.Size(241, 31);
             this.txtCourseNam.TabIndex = 1;
@@ -59,7 +59,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(331, 384);
+            this.label2.Location = new System.Drawing.Point(321, 600);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 25);
             this.label2.TabIndex = 2;
@@ -67,14 +67,14 @@
             // 
             // txtCourseDescription
             // 
-            this.txtCourseDescription.Location = new System.Drawing.Point(473, 378);
+            this.txtCourseDescription.Location = new System.Drawing.Point(442, 597);
             this.txtCourseDescription.Name = "txtCourseDescription";
             this.txtCourseDescription.Size = new System.Drawing.Size(241, 31);
             this.txtCourseDescription.TabIndex = 3;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(32, 497);
+            this.btnAdd.Location = new System.Drawing.Point(12, 716);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(187, 41);
             this.btnAdd.TabIndex = 4;
@@ -84,39 +84,43 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(279, 497);
+            this.btnUpdate.Location = new System.Drawing.Point(258, 716);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(187, 41);
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "Uredi";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(502, 497);
+            this.btnDelete.Location = new System.Drawing.Point(485, 716);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(187, 41);
             this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "Obriši";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(725, 497);
+            this.btnClose.Location = new System.Drawing.Point(709, 716);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(187, 41);
             this.btnClose.TabIndex = 7;
             this.btnClose.Text = "Zatvori";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.ClientSizeChanged += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // dgvCourses
             // 
             this.dgvCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCourses.Location = new System.Drawing.Point(-6, -139);
+            this.dgvCourses.Location = new System.Drawing.Point(1, -2);
             this.dgvCourses.Name = "dgvCourses";
             this.dgvCourses.RowHeadersWidth = 82;
             this.dgvCourses.RowTemplate.Height = 33;
-            this.dgvCourses.Size = new System.Drawing.Size(988, 947);
+            this.dgvCourses.Size = new System.Drawing.Size(941, 802);
             this.dgvCourses.TabIndex = 8;
             this.dgvCourses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCourses_CellContentClick);
             // 

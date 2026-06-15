@@ -44,5 +44,58 @@ namespace Infoeduka_PraTim3.Repositories
 
             return courses;
         }
+
+        public void AddCourse(Course course)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = @"INSERT INTO Courses (Name, Description)
+                         VALUES (@Name, @Description)";
+
+                SqlCommand command = new SqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@Name", course.Name);
+                command.Parameters.AddWithValue("@Description", course.Description);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
+
+
+        public void UpdateCourse(Course course)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = @"UPDATE Courses
+                         SET Name = @Name,
+                             Description = @Description
+                         WHERE Id = @Id";
+
+                SqlCommand command = new SqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@Id", course.Id);
+                command.Parameters.AddWithValue("@Name", course.Name);
+                command.Parameters.AddWithValue("@Description", course.Description);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
+
+        public void DeleteCourse(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "DELETE FROM Courses WHERE Id = @Id";
+
+                SqlCommand command = new SqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@Id", id);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
     }
 }
