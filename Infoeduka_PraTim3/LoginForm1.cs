@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Infoeduka_PraTim3.Repositories;
 
 namespace Infoeduka_PraTim3
 {

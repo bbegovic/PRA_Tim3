@@ -35,7 +35,14 @@ namespace Infoeduka_PraTim3
             coursesForm.ShowDialog(); // otvori CoursesForm
             this.Show();           // vrati Admin Dashboard kad zatvoriš CoursesForm
         }
+        private void btnLecturers_Click(object sender, EventArgs e)
+        {
+            LecturersForm lecturersForm = new LecturersForm();
 
+            this.Hide();
+            lecturersForm.ShowDialog();
+            this.Show();
+        }
         private void AdminDashboardForm_Load(object sender, EventArgs e)
         {
 

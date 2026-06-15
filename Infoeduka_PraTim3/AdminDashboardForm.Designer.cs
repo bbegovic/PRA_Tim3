@@ -64,6 +64,7 @@
             this.btnLecturers.TabIndex = 4;
             this.btnLecturers.Text = "Upravljanje predavačima:";
             this.btnLecturers.UseVisualStyleBackColor = true;
+            this.btnLecturers.Click += new System.EventHandler(this.btnLecturers_Click);
             // 
             // btnNotifications
             // 
