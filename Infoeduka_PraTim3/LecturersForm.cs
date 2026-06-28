@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using Infoeduka_PraTim3.Models;
 using Infoeduka_PraTim3.Repositories;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace Infoeduka_PraTim3
 {
@@ -29,6 +30,9 @@ namespace Infoeduka_PraTim3
         private void LecturersForm_Load(object sender, EventArgs e)
         {
             LoadLecturers();
+            RemoveHighliht();
+
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -53,20 +57,13 @@ namespace Infoeduka_PraTim3
             txtEmail.Clear();
             txtPassword.Clear();
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFirstName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void dgvLecturers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            btnDelete.Enabled = true;
+            btnUpdate.Enabled = true;
         }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (dgvLecturers.CurrentRow == null)
@@ -116,15 +113,50 @@ namespace Infoeduka_PraTim3
             this.Hide();
         }
 
-        private void dgvLecturers_CellClick(object sender, DataGridViewCellEventArgs e)
+        //private void dgvLecturers_CellClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    if (e.RowIndex >= 0)
+        //    {
+        //        txtFirstName.Text = dgvLecturers.Rows[e.RowIndex].Cells["FirstName"].Value.ToString();
+        //        txtLastName.Text = dgvLecturers.Rows[e.RowIndex].Cells["LastName"].Value.ToString();
+        //        txtEmail.Text = dgvLecturers.Rows[e.RowIndex].Cells["Email"].Value.ToString();
+        //        txtPassword.Text = dgvLecturers.Rows[e.RowIndex].Cells["PasswordHash"].Value.ToString();
+        //    }
+        //}
+
+    
+
+        private void LecturersForm_Click(object sender, EventArgs e)
         {
+            RemoveHighliht();
+        }
+
+        private void RemoveHighliht()
+        {
+            dgvLecturers.ClearSelection();
+            dgvLecturers.CurrentCell = null;
+            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
+            
+        }
+
+        private void dgvLecturers_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            btnDelete.Enabled = true;
+            btnUpdate.Enabled = true;
+
             if (e.RowIndex >= 0)
             {
-                txtFirstName.Text = dgvLecturers.Rows[e.RowIndex].Cells["FirstName"].Value.ToString();
-                txtLastName.Text = dgvLecturers.Rows[e.RowIndex].Cells["LastName"].Value.ToString();
-                txtEmail.Text = dgvLecturers.Rows[e.RowIndex].Cells["Email"].Value.ToString();
-                txtPassword.Text = dgvLecturers.Rows[e.RowIndex].Cells["PasswordHash"].Value.ToString();
+                DataGridViewRow red = dgvLecturers.Rows[e.RowIndex];
+
+                txtFirstName.Text = red.Cells["FirstName"].Value?.ToString();
+                txtLastName.Text = red.Cells["LastName"].Value?.ToString();
+                txtEmail.Text = red.Cells["Email"].Value?.ToString();
+                txtPassword.Text = red.Cells["PasswordHash"].Value?.ToString();
+
             }
+
+
         }
     }
 }

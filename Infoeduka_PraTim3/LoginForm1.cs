@@ -13,15 +13,21 @@ namespace Infoeduka_PraTim3
 {
     public partial class LoginForm1 : Form
     {
+        private string initEmail;
+        private string initePassword;
+        
         public LoginForm1()
         {
             InitializeComponent();
+            initEmail = txtEmail.Text;
+            initePassword = txtPassword.Text;
+
+
+
+
+
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -40,16 +46,34 @@ namespace Infoeduka_PraTim3
 
             if (user.Role == "Administrator")
             {
-                AdminDashboardForm adminForm = new AdminDashboardForm();
+                AdminDashboardForm adminForm = new AdminDashboardForm(this);
                 adminForm.Show();
                 this.Hide();
             }
             else if (user.Role == "Predavac")
             {
-                LecturerDashboardForm lecturerForm = new LecturerDashboardForm();
+                LecturerDashboardForm lecturerForm = new LecturerDashboardForm(this);
                 lecturerForm.Show();
                 this.Hide();
+              
             }
+            TextBoxReset();
+        }
+
+        private void TextBoxReset()
+        {
+            txtEmail.Text = null;
+            txtPassword.Text = null;
+            txtEmail.PlaceholdeText = initEmail;
+            txtPassword.PlaceholdeText = initePassword;
+        }
+
+        private void LoginForm1_Load(object sender, EventArgs e)
+        {
+            txtEmail.Text = "admin@infoeduka.hr";
+            txtPassword.Text = "admin123";
+            btnLogin.PerformClick();
+            
         }
     }
 }

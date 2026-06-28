@@ -12,9 +12,11 @@ namespace Infoeduka_PraTim3
 {
     public partial class AdminDashboardForm : Form
     {
-        public AdminDashboardForm()
+        private LoginForm1 login;
+        public AdminDashboardForm(LoginForm1 formLogin)
         {
             InitializeComponent();
+            login = formLogin;
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
@@ -46,6 +48,16 @@ namespace Infoeduka_PraTim3
         private void AdminDashboardForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+           if(MessageBox.Show("Jeste li sigurni da se želite odjaviti?", "Potvrda odjave", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+                login.Show();
+            }
+            
         }
     }
 }
