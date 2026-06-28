@@ -48,7 +48,7 @@
             // 
             // btnUsers
             // 
-            this.btnUsers.Location = new System.Drawing.Point(8, 155);
+            this.btnUsers.Location = new System.Drawing.Point(61, 155);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(309, 45);
             this.btnUsers.TabIndex = 3;
@@ -58,7 +58,7 @@
             // 
             // btnLecturers
             // 
-            this.btnLecturers.Location = new System.Drawing.Point(8, 283);
+            this.btnLecturers.Location = new System.Drawing.Point(61, 294);
             this.btnLecturers.Name = "btnLecturers";
             this.btnLecturers.Size = new System.Drawing.Size(309, 45);
             this.btnLecturers.TabIndex = 4;
@@ -68,7 +68,7 @@
             // 
             // btnNotifications
             // 
-            this.btnNotifications.Location = new System.Drawing.Point(429, 283);
+            this.btnNotifications.Location = new System.Drawing.Point(499, 294);
             this.btnNotifications.Name = "btnNotifications";
             this.btnNotifications.Size = new System.Drawing.Size(309, 45);
             this.btnNotifications.TabIndex = 5;
@@ -78,7 +78,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(429, 155);
+            this.button1.Location = new System.Drawing.Point(499, 155);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(309, 45);
             this.button1.TabIndex = 6;
@@ -88,7 +88,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(51, 505);
+            this.btnLogout.Location = new System.Drawing.Point(117, 510);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(155, 53);
             this.btnLogout.TabIndex = 7;
