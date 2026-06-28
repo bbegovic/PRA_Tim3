@@ -55,7 +55,7 @@
             this.dgvLecturers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLecturers.GridColor = System.Drawing.SystemColors.Control;
             this.dgvLecturers.Location = new System.Drawing.Point(10, 10);
-            this.dgvLecturers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvLecturers.Margin = new System.Windows.Forms.Padding(2);
             this.dgvLecturers.Name = "dgvLecturers";
             this.dgvLecturers.RowHeadersWidth = 82;
             this.dgvLecturers.RowTemplate.Height = 33;
@@ -66,7 +66,7 @@
             // txtFirstName
             // 
             this.txtFirstName.Location = new System.Drawing.Point(254, 163);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(90, 20);
             this.txtFirstName.TabIndex = 1;
@@ -74,7 +74,7 @@
             // txtLastName
             // 
             this.txtLastName.Location = new System.Drawing.Point(254, 195);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(2);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(90, 20);
             this.txtLastName.TabIndex = 2;
@@ -82,7 +82,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(254, 224);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(108, 20);
             this.txtEmail.TabIndex = 3;
@@ -90,7 +90,7 @@
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(254, 252);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(90, 20);
             this.txtPassword.TabIndex = 4;
@@ -134,7 +134,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(10, 294);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(84, 22);
             this.btnAdd.TabIndex = 8;
@@ -145,7 +145,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Location = new System.Drawing.Point(123, 294);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(84, 22);
             this.btnUpdate.TabIndex = 9;
@@ -156,7 +156,7 @@
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(229, 294);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(84, 22);
             this.btnDelete.TabIndex = 10;
@@ -167,7 +167,7 @@
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(340, 294);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(84, 22);
             this.btnClose.TabIndex = 11;
@@ -193,7 +193,7 @@
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.dgvLecturers);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LecturersForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LecturersForm";
