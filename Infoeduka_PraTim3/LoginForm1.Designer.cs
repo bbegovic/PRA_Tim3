@@ -29,67 +29,87 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.txtPassword = new Infoeduka_PraTim3.Custom.CTextBox();
+            this.txtEmail = new Infoeduka_PraTim3.Custom.CTextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(195, 161);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 25);
+            this.label1.Size = new System.Drawing.Size(80, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Email:";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(323, 161);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(291, 31);
-            this.txtEmail.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(173, 213);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 93);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 25);
+            this.label2.Size = new System.Drawing.Size(101, 29);
             this.label2.TabIndex = 2;
             this.label2.Text = "Lozinka:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(323, 210);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(291, 31);
-            this.txtPassword.TabIndex = 3;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(323, 298);
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(85, 178);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(139, 36);
+            this.btnLogin.Size = new System.Drawing.Size(204, 45);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Prijava";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.LightGray;
+            this.txtPassword.IsPassword = true;
+            this.txtPassword.Location = new System.Drawing.Point(16, 125);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.NormalTextColor = System.Drawing.Color.Black;
+            this.txtPassword.PlaceholdeText = "********";
+            this.txtPassword.Size = new System.Drawing.Size(372, 35);
+            this.txtPassword.TabIndex = 6;
+            this.txtPassword.Text = "********";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.LightGray;
+            this.txtEmail.IsPassword = false;
+            this.txtEmail.Location = new System.Drawing.Point(16, 41);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.NormalTextColor = System.Drawing.Color.Black;
+            this.txtEmail.PlaceholdeText = "korisnik@infoeduka.hr";
+            this.txtEmail.Size = new System.Drawing.Size(372, 35);
+            this.txtEmail.TabIndex = 5;
+            this.txtEmail.Text = "korisnik@infoeduka.hr";
+            // 
             // LoginForm1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AcceptButton = this.btnLogin;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnLogin);
+            this.ClientSize = new System.Drawing.Size(400, 234);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginForm1";
             this.Text = "Form1";
+            this.Shown += new System.EventHandler(this.LoginForm1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -98,10 +118,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
+        private Custom.CTextBox txtEmail;
+        private Custom.CTextBox txtPassword;
     }
 }
 
