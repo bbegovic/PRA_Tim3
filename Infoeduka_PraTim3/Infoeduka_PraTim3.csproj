@@ -59,6 +59,10 @@
     <Compile Include="CoursesForm.Designer.cs">
       <DependentUpon>CoursesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Custom\CTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom\CurrentUser.cs" />
     <Compile Include="LecturerDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,10 +84,23 @@
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Notification.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="NotificationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationsForm.Designer.cs">
+      <DependentUpon>NotificationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationVew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationVew.Designer.cs">
+      <DependentUpon>NotificationVew.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CourseRepository.cs" />
     <Compile Include="Repositories\LecturerRepository.cs" />
+    <Compile Include="Repositories\NotificationRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <EmbeddedResource Include="AdminDashboardForm.resx">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
@@ -99,6 +116,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm1.resx">
       <DependentUpon>LoginForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationsForm.resx">
+      <DependentUpon>NotificationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationVew.resx">
+      <DependentUpon>NotificationVew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
