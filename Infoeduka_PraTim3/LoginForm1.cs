@@ -1,4 +1,5 @@
-﻿using Infoeduka_PraTim3.Repositories;
+﻿using Infoeduka_PraTim3.Helpers;
+using Infoeduka_PraTim3.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,6 +38,8 @@ namespace Infoeduka_PraTim3
                 txtEmail.Text,
                 txtPassword.Text
             );
+
+            AppSession.CurrentUser = user;
 
             if (user == null)
             {
