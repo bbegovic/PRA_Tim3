@@ -12,14 +12,20 @@ namespace Infoeduka_PraTim3
 {
     public partial class AdminDashboardForm : Form
     {
-        public AdminDashboardForm()
+        private LoginForm1 login;
+        public AdminDashboardForm(LoginForm1 formLogin)
         {
             InitializeComponent();
+            login = formLogin;
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
+            UsersForm usersForm = new UsersForm();
 
+            this.Hide();
+            usersForm.ShowDialog();
+            this.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,10 +41,27 @@ namespace Infoeduka_PraTim3
             coursesForm.ShowDialog(); // otvori CoursesForm
             this.Show();           // vrati Admin Dashboard kad zatvoriš CoursesForm
         }
+        private void btnLecturers_Click(object sender, EventArgs e)
+        {
+            LecturersForm lecturersForm = new LecturersForm();
 
+            this.Hide();
+            lecturersForm.ShowDialog();
+            this.Show();
+        }
         private void AdminDashboardForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+           if(MessageBox.Show("Jeste li sigurni da se želite odjaviti?", "Potvrda odjave", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+                login.Show();
+            }
+            
         }
     }
 }

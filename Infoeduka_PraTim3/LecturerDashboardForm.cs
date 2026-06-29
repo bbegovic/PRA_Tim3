@@ -12,9 +12,11 @@ namespace Infoeduka_PraTim3
 {
     public partial class LecturerDashboardForm : Form
     {
-        public LecturerDashboardForm()
+        private LoginForm1 login;
+        public LecturerDashboardForm(LoginForm1 loginForma)
         {
             InitializeComponent();
+            login = loginForma;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -24,6 +26,16 @@ namespace Infoeduka_PraTim3
 
         private void LecturerDashboardForm_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Jeste li sigurni da se želite odjaviti?", "Potvrda odjave", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+                login.Show();
+            }
 
         }
     }
