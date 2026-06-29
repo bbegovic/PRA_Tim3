@@ -63,6 +63,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Custom\CurrentUser.cs" />
+    <Compile Include="Helpers\AppSession.cs" />
     <Compile Include="LecturerDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
