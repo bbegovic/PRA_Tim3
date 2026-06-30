@@ -37,6 +37,23 @@ namespace Infoeduka_PraTim3
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtFirstName.Text) ||
+                string.IsNullOrWhiteSpace(txtLastName.Text) ||
+                string.IsNullOrWhiteSpace(txtEmail.Text) ||
+                string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                MessageBox.Show("Sva polja moraju biti popunjena.", "Dodavanje predavača", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            LecturerRepository repository = new LecturerRepository();
+
+            if (repository.GetAllLecturers().Exists(l => l.Email == txtEmail.Text))
+            {
+                MessageBox.Show("Predavač s istim emailom već postoji.", "Dodavanje predavača", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             User lecturer = new User
             {
                 FirstName = txtFirstName.Text,
@@ -46,7 +63,6 @@ namespace Infoeduka_PraTim3
                 Role = "Predavac"
             };
 
-            LecturerRepository repository = new LecturerRepository();
             repository.AddLecturer(lecturer);
 
             MessageBox.Show("Predavač je dodan.");
@@ -69,6 +85,15 @@ namespace Infoeduka_PraTim3
             if (dgvLecturers.CurrentRow == null)
             {
                 MessageBox.Show("Odaberi predavača za uređivanje.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtFirstName.Text) ||
+                string.IsNullOrWhiteSpace(txtLastName.Text) ||
+                string.IsNullOrWhiteSpace(txtEmail.Text) ||
+                string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                MessageBox.Show("Sva polja moraju biti popunjena.", "Dodavanje predavača", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

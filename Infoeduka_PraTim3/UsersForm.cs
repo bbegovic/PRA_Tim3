@@ -52,7 +52,23 @@ namespace Infoeduka_PraTim3
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(tbFirstName.Text) || string.IsNullOrWhiteSpace(tbLastName.Text) ||
+                string.IsNullOrWhiteSpace(tbEmail.Text) || string.IsNullOrWhiteSpace(tbPassword.Text) ||
+                !gbRole.Controls.OfType<RadioButton>().Any(r => r.Checked))
+            {
+                MessageBox.Show("Popuni sva polja.", "Dodavanje korisnika", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             String role = gbRole.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked)?.Text;
+
+            UserRepository repo = new UserRepository();
+
+            if (repo.GetAllUsers().Any(u => u.Email == tbEmail.Text))
+            {
+                MessageBox.Show("Korisnik s istim emailom već postoji.", "Dodavanje korisnika", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             User user = new User
             {
@@ -63,7 +79,6 @@ namespace Infoeduka_PraTim3
                 Role = role == "Predavač" ? "Predavac" : role
             };
 
-            UserRepository repo = new UserRepository();
             repo.AddUser(user);
 
             MessageBox.Show("Korisnik uspješno dodan.", "Novi korisnik", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -81,6 +96,14 @@ namespace Infoeduka_PraTim3
             if (dgvUsers.CurrentRow == null)
             {
                 MessageBox.Show("Odaberi korisnika za izmjenu.", "Izmjena korisnika", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(tbFirstName.Text) || string.IsNullOrWhiteSpace(tbLastName.Text) ||
+                string.IsNullOrWhiteSpace(tbEmail.Text) || string.IsNullOrWhiteSpace(tbPassword.Text) ||
+                !gbRole.Controls.OfType<RadioButton>().Any(r => r.Checked))
+            {
+                MessageBox.Show("Popuni sva polja.", "Izmjena korisnika", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -124,6 +147,21 @@ namespace Infoeduka_PraTim3
         {
             btnEdit.Enabled = true;
             btnDelete.Enabled = true;
+
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvUsers.Rows[e.RowIndex];
+
+                tbFirstName.Text = row.Cells["FirstName"].Value?.ToString();
+                tbLastName.Text = row.Cells["LastName"].Value?.ToString();
+                tbEmail.Text = row.Cells["Email"].Value?.ToString();
+                tbPassword.Text = row.Cells["PasswordHash"].Value?.ToString();
+
+                bool isActive = Convert.ToBoolean(row.Cells["Role"].Value?.ToString() == "Predavac");
+
+                rbLecturer.Checked = isActive;
+                rbAdmin.Checked = !isActive;
+            }
         }
     }
 }
