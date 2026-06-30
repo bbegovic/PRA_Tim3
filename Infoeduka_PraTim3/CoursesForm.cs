@@ -7,6 +7,7 @@ namespace Infoeduka_PraTim3
 {
     public partial class CoursesForm : Form
     {
+        
         public CoursesForm()
         {
             InitializeComponent();
@@ -113,6 +114,24 @@ namespace Infoeduka_PraTim3
                 txtCourseNam.Text = dgvCourses.Rows[e.RowIndex].Cells["Name"].Value.ToString();
                 txtCourseDescription.Text = dgvCourses.Rows[e.RowIndex].Cells["Description"].Value.ToString();
             }
+        }
+
+        private void btnAddLecturer_Click(object sender, EventArgs e)
+        {
+            if (dgvCourses.CurrentRow == null)
+            {
+                MessageBox.Show("Odaberi kolegij za dodavanje predavača.");
+                return;
+            }
+            int id = Convert.ToInt32(dgvCourses.CurrentRow.Cells["Id"].Value);
+            string name = dgvCourses.CurrentRow.Cells["Name"].Value.ToString();
+
+            AssignLecturer assignForm = new AssignLecturer(id,name);
+
+            assignForm.Show();
+             
+            
+
         }
     }
 }
