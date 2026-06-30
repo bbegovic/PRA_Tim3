@@ -78,11 +78,12 @@
             // 
             // cbCourse
             // 
+            this.cbCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCourse.FormattingEnabled = true;
-            this.cbCourse.Location = new System.Drawing.Point(12, 126);
+            this.cbCourse.Location = new System.Drawing.Point(17, 126);
             this.cbCourse.Name = "cbCourse";
-            this.cbCourse.Size = new System.Drawing.Size(543, 33);
+            this.cbCourse.Size = new System.Drawing.Size(538, 33);
             this.cbCourse.TabIndex = 4;
             // 
             // txtDecription
@@ -104,6 +105,7 @@
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Dodaj";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClose
             // 
@@ -115,6 +117,7 @@
             this.btnClose.TabIndex = 7;
             this.btnClose.Text = "Izađi";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // NotificationsForm
             // 
@@ -131,6 +134,7 @@
             this.Controls.Add(this.label1);
             this.Name = "NotificationsForm";
             this.Text = "NotificationsForm";
+            this.Load += new System.EventHandler(this.NotificationsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
