@@ -73,10 +73,15 @@ namespace Infoeduka_PraTim3
 
         private void LoginForm1_Load(object sender, EventArgs e)
         {
-            txtEmail.Text = "admin@infoeduka.hr";
-            txtPassword.Text = "admin123";
-            btnLogin.PerformClick();
+            //txtEmail.Text = "admin@infoeduka.hr";
+            //txtPassword.Text = "admin123";
+            //btnLogin.PerformClick();
             
+        }
+
+        private void LoginForm1_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
