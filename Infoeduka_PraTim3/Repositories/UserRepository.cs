@@ -39,6 +39,7 @@ namespace Infoeduka_PraTim3.Repositories
                         FirstName = reader["FirstName"].ToString(),
                         LastName = reader["LastName"].ToString(),
                         Email = reader["Email"].ToString(),
+                        PasswordHash = reader["PasswordHash"].ToString(),
                         Role = reader["Role"].ToString()
                     }
                     );
@@ -70,6 +71,7 @@ namespace Infoeduka_PraTim3.Repositories
             }
         }
 
+
         public void UpdateUser(User user)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -95,6 +97,29 @@ namespace Infoeduka_PraTim3.Repositories
                 comm.ExecuteNonQuery();
             }
         }
+        public void UpdateUserWithoutPassword(User user)
+{
+    using (SqlConnection conn = new SqlConnection(connectionString))
+    {
+        string query = @"UPDATE Users
+                        SET FirstName = @FirstName,
+                            LastName = @LastName,
+                            Email = @Email,
+                            Role = @Role
+                        WHERE Id = @Id";
+
+        SqlCommand comm = new SqlCommand(query, conn);
+
+        comm.Parameters.AddWithValue("@Id", user.Id);
+        comm.Parameters.AddWithValue("@FirstName", user.FirstName);
+        comm.Parameters.AddWithValue("@LastName", user.LastName);
+        comm.Parameters.AddWithValue("@Email", user.Email);
+        comm.Parameters.AddWithValue("@Role", user.Role);
+
+        conn.Open();
+        comm.ExecuteNonQuery();
+    }
+}
 
         public void DeleteUser(int id)
         {

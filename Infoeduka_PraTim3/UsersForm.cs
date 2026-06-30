@@ -100,7 +100,7 @@ namespace Infoeduka_PraTim3
             }
 
             if (string.IsNullOrWhiteSpace(tbFirstName.Text) || string.IsNullOrWhiteSpace(tbLastName.Text) ||
-                string.IsNullOrWhiteSpace(tbEmail.Text) || string.IsNullOrWhiteSpace(tbPassword.Text) ||
+                string.IsNullOrWhiteSpace(tbEmail.Text) ||
                 !gbRole.Controls.OfType<RadioButton>().Any(r => r.Checked))
             {
                 MessageBox.Show("Popuni sva polja.", "Izmjena korisnika", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -155,13 +155,18 @@ namespace Infoeduka_PraTim3
                 tbFirstName.Text = row.Cells["FirstName"].Value?.ToString();
                 tbLastName.Text = row.Cells["LastName"].Value?.ToString();
                 tbEmail.Text = row.Cells["Email"].Value?.ToString();
-                tbPassword.Text = row.Cells["PasswordHash"].Value?.ToString();
-
+                // tbPassword.Text = row.Cells["PasswordHash"].Value?.ToString();
+                tbPassword.Clear();
                 bool isActive = Convert.ToBoolean(row.Cells["Role"].Value?.ToString() == "Predavac");
 
                 rbLecturer.Checked = isActive;
                 rbAdmin.Checked = !isActive;
             }
+        }
+
+        private void dgvUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
