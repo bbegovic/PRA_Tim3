@@ -21,7 +21,11 @@ namespace Infoeduka_PraTim3
 
         private void button1_Click(object sender, EventArgs e)
         {
+            NotificationVew form = new NotificationVew();
 
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
         }
 
         private void LecturerDashboardForm_Load(object sender, EventArgs e)

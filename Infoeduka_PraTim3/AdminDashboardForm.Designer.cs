@@ -78,7 +78,7 @@
             this.btnNotifications.TabIndex = 5;
             this.btnNotifications.Text = " Upravljanje obavijestima:";
             this.btnNotifications.UseVisualStyleBackColor = true;
-            this.btnNotifications.Click += new System.EventHandler(this.button1_Click);
+            this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
             // 
             // button1
             // 

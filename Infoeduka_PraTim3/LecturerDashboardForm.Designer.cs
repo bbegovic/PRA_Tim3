@@ -47,7 +47,7 @@
             // btnMyCourses
             // 
             this.btnMyCourses.Location = new System.Drawing.Point(47, 76);
-            this.btnMyCourses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMyCourses.Margin = new System.Windows.Forms.Padding(2);
             this.btnMyCourses.Name = "btnMyCourses";
             this.btnMyCourses.Size = new System.Drawing.Size(136, 23);
             this.btnMyCourses.TabIndex = 1;
@@ -57,7 +57,7 @@
             // btnMyNotifications
             // 
             this.btnMyNotifications.Location = new System.Drawing.Point(248, 76);
-            this.btnMyNotifications.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMyNotifications.Margin = new System.Windows.Forms.Padding(2);
             this.btnMyNotifications.Name = "btnMyNotifications";
             this.btnMyNotifications.Size = new System.Drawing.Size(136, 23);
             this.btnMyNotifications.TabIndex = 2;
@@ -68,7 +68,7 @@
             // btnLogout
             // 
             this.btnLogout.Location = new System.Drawing.Point(190, 207);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(76, 31);
             this.btnLogout.TabIndex = 3;
@@ -85,7 +85,7 @@
             this.Controls.Add(this.btnMyNotifications);
             this.Controls.Add(this.btnMyCourses);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LecturerDashboardForm";
             this.Text = "LecturerDashboardForm";
             this.Load += new System.EventHandler(this.LecturerDashboardForm_Load);

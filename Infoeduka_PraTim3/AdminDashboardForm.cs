@@ -28,11 +28,6 @@ namespace Infoeduka_PraTim3
             this.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             CoursesForm coursesForm = new CoursesForm();
@@ -62,6 +57,15 @@ namespace Infoeduka_PraTim3
                 login.Show();
             }
             
+        }
+
+        private void btnNotifications_Click(object sender, EventArgs e)
+        {
+            NotificationVew form = new NotificationVew();
+
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
         }
     }
 }

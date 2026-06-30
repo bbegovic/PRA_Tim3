@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvNotifications = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNotifications)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvNotifications
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(717, 317);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvNotifications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNotifications.Location = new System.Drawing.Point(12, 12);
+            this.dgvNotifications.MultiSelect = false;
+            this.dgvNotifications.Name = "dgvNotifications";
+            this.dgvNotifications.Size = new System.Drawing.Size(717, 317);
+            this.dgvNotifications.TabIndex = 0;
+            this.dgvNotifications.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNotifications_CellClick);
             // 
             // btnAdd
             // 
@@ -97,17 +99,18 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvNotifications);
             this.Name = "NotificationVew";
             this.Text = "NotificationVew";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.NotificationVew_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNotifications)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvNotifications;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;

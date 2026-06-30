@@ -97,5 +97,61 @@ namespace Infoeduka_PraTim3.Repositories
                 command.ExecuteNonQuery();
             }
         }
+
+        public Course GetCourseByName(string name)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * FROM Courses WHERE Name = @Name";
+
+                SqlCommand command = new SqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@Name", name);
+
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    return new Course
+                    {
+                        Id = Convert.ToInt32(reader["Id"]),
+                        Name = reader["Name"].ToString(),
+                        Description = reader["Description"].ToString()
+                    };
+                }
+            }
+
+            return null;
+        }
+
+        public Course GetCourseById(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * FROM Courses WHERE Id = @Id";
+
+                SqlCommand command = new SqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@Id", id);
+
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    return new Course
+                    {
+                        Id = Convert.ToInt32(reader["Id"]),
+                        Name = reader["Name"].ToString(),
+                        Description = reader["Description"].ToString()
+                    };
+                }
+            }
+
+            return null;
+        }
     }
 }

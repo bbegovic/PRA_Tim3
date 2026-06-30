@@ -57,7 +57,7 @@ namespace Infoeduka_PraTim3.Repositories
                 string query = @"INSERT INTO Notifications
                                 (CourseID, CreatorId, Title, Description, PublishDate, ExpiryDate)
                                 VALUES
-                                (@CourseID, @CreatorId, @Title, @Description, '@PublishDate', '@ExpiryDate')";
+                                (@CourseID, @CreatorId, @Title, @Description, @PublishDate, @ExpiryDate)";
 
                 SqlCommand command = new SqlCommand(query, connection);
 
